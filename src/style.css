@@ -46,8 +46,15 @@ html { scroll-behavior: smooth; }
 }
 
 /* Logo */
-.nav-logo { display: flex; align-items: center; gap: 12px; z-index: 1100; }
-.logo-circle { width: 32px; height: 32px; background: white; border-radius: 50% 50% 2px 50%; }
+.nav-logo { display: flex; align-items: center; gap: 3px; z-index: 1100; }
+.logo-circle { width: 32px; height: 32px; background: #9333ea; border-radius: 50% 50% 2px 50%; }
+.logo-circle i{
+  font-size: 22px;
+  margin-left: 5px;
+  color: #fff;
+  margin-top: 5px;
+  transform: rotateY(-180deg);
+}
 .logo-text { display: flex; flex-direction: column; line-height: 1.1; }
 .logo-text .name { font-weight: 700; font-size: 1.1rem; color: white; }
 .logo-text .brand { font-weight: 300; font-size: 0.8rem; color: var(--text-secondary); }
@@ -207,15 +214,15 @@ html { scroll-behavior: smooth; }
 /* Boutons Affinés */
 .hero-btns-group {
   display: flex;
-  gap: 12px;
+  gap: 10px;
   margin-top: 10px;
 }
 
 .btn-filled, .btn-text-only {
-  padding: 10px 24px;
+  padding: 15px 22px;
   border-radius: 50px;
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-size: 1rem;
+  font-weight: 700;
   cursor: pointer;
   transition: 0.3s;
   display: flex;
@@ -318,8 +325,23 @@ html { scroll-behavior: smooth; }
 .about-footer {
   display: flex;
   align-items: center;
-  gap: 25px;
+  gap: 10px;
 }
+ 
+
+.about .about-text .about-footer button{
+  gap: 5px;
+}
+
+.about .about-text .about-footer  a {
+  gap: 50px;
+  padding: 20px;
+  border-radius: 50px;
+  text-decoration: none;color: #fff;
+  margin: 10px;
+  background: #9333ea;
+}
+.about .about-text .about-footer  a i{ margin-right: 10px;}
 
 .social-proof .stars {
   font-size: 0.75rem;
@@ -1006,3 +1028,29 @@ html { scroll-behavior: smooth; }
     padding: 0px;
   }
 }
+
+
+/* --- ANIMATIONS DE REVEAL --- */
+
+/* État initial : caché */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, opacity;
+}
+
+/* Variantes de direction */
+.reveal.left { transform: translateX(-50px); }
+.reveal.right { transform: translateX(50px); }
+
+/* État actif : visible */
+.reveal.active {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* Délais pour les listes (Grilles) */
+.reveal.delay-1 { transition-delay: 0.1s; }
+.reveal.delay-2 { transition-delay: 0.2s; }
+.reveal.delay-3 { transition-delay: 0.3s; }

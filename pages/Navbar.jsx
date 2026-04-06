@@ -20,7 +20,9 @@ function Navbar() {
         
         {/* Logo */}
         <div className="nav-logo">
-          <div className="logo-circle"></div>
+         <div className="logo-circle">
+  <i className="fas fa-pen-nib"></i> 
+</div>
           <div className="logo-text">
             <span className="name">Magloire</span>
             <span className="brand">Copy Impact</span>
@@ -30,7 +32,7 @@ function Navbar() {
         {/* MENU MOBILE & DESKTOP */}
         <ul className={`nav-links ${isOpen ? 'show' : ''}`}>
           <li style={{ "--i": 3 }}><a href="#apropos" onClick={() => setIsOpen(false)}>À propos</a></li>
-          <li style={{ "--i": 1 }}><a href="#expertise" onClick={() => setIsOpen(false)}>Expertises</a></li>
+          <li style={{ "--i": 1 }}><a href="#expertises" onClick={() => setIsOpen(false)}>Expertises</a></li>
           <li style={{ "--i": 2 }}><a href="#resultats" onClick={() => setIsOpen(false)}>Résultats</a></li>
           <li style={{ "--i": 4 }}><a href="#faq" onClick={() => setIsOpen(false)}>FAQ</a></li>
           
@@ -49,7 +51,14 @@ function Navbar() {
           </div>
           
           {/* Bouton contact ORIGINAL (Caché sur Mobile via CSS) */}
-          <button className="btn-contact desktop-only-btn">Me contacter</button>
+          <button
+  className="btn-contact desktop-only-btn"
+  onClick={() => {
+    document.querySelector("#contact").scrollIntoView({ behavior: "smooth" });
+  }}
+>
+  Me contacter
+</button>
           
           {/* Hamburger */}
           <div className={`hamburger ${isOpen ? 'toggle' : ''}`} onClick={() => setIsOpen(!isOpen)}>
