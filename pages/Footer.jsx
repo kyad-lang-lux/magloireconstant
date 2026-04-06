@@ -24,9 +24,14 @@ function Footer() {
             <a href="https://wa.me/22951895151" target="_blank" rel="noopener noreferrer" className="social-icon">
               <i className="fa-brands fa-whatsapp"></i>
             </a>
-            <a href="#" className="social-icon">
-              <i className="fa-solid fa-envelope"></i>
-            </a>
+            <a
+  href="mailto:constanthezonvode@gmail.com"
+  className="social-icon"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <i className="fa-solid fa-envelope"></i>
+</a>
             <a href="https://www.instagram.com/magloirecopy" className="social-icon">
               <i className="fa-brands fa-instagram"></i>
             </a>
