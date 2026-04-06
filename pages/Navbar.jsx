@@ -43,11 +43,9 @@ function Navbar() {
         {/* Barre de droite (Desktop) */}
         <div className="nav-right">
           <div className="desktop-socials">
-            <a href="#"><i className="fab fa-facebook"></i></a>
-            <a href="#"><i className="fab fa-instagram"></i></a>
-            <a href="#"><i className="fab fa-tiktok"></i></a>
-            <a href="#"><i className="fab fa-youtube"></i></a>
-            <a href="#"><i className="fab fa-whatsapp"></i></a>
+            <a href="https://www.facebook.com/magloire.copy.impact"><i className="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/magloirecopy"><i className="fab fa-instagram"></i></a>
+            <a href="https://wa.me/22951895151"><i className="fab fa-whatsapp"></i></a>
           </div>
           
           {/* Bouton contact ORIGINAL (Caché sur Mobile via CSS) */}
